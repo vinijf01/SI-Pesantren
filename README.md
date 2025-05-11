@@ -1,6 +1,6 @@
 # 🌙 SI Website Pesantren
 
-Sistem Informasi Website Pesantren adalah platform digital untuk mengelola informasi kegiatan pesantren, PPDB, galeri, berita, serta progress santri. Dibuat menggunakan Laravel sebagai backend framework.
+Sistem Informasi Website Pesantren adalah platform digital untuk wadah promosi dan juga mengelola informasi kegiatan pesantren, PPDB, galeri, berita, serta progress belajar santri. Dibuat menggunakan Laravel sebagai backend framework.
 
 ## 📌 Fitur Utama
 
