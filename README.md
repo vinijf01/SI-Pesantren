@@ -13,6 +13,7 @@ Sistem Informasi Website Pesantren adalah platform digital untuk mengelola infor
 -   Detail Berita & Pencarian Berita
 -   Galeri & Fasilitas
 -   Kontak & Tentang Yayasan
+    ![image](https://github.com/user-attachments/assets/1472ac4b-fde9-4219-aac6-2dfd4df303cf)
 
 ### Formulir
 
@@ -42,13 +43,45 @@ Sistem Informasi Website Pesantren adalah platform digital untuk mengelola infor
 
 -   Laravel (PHP)
 -   Blade Templating
--   MySQL / MariaDB
+-   MySQL
 -   Laravel Authentication
 
 ## 🛠️ Instalasi Lokal
 
 1. Clone repositori ini
     ```bash
-    git clone https://github.com/username/si-pesantren.git
-    cd si-pesantren
+    git clone https://github.com/vinijf01/SI-Pesantren.git
+    cd Si-Pesantren
     ```
+2. Install dependensi
+    ```bash
+    composer install
+    ```
+3. Salin file `.env.example` menjadi `.env`
+    ```bash
+    cp .env.example .env
+    ```
+4. Generate key aplikasi
+    ```bash
+    php artisan key:generate
+    ```
+5. Buat database di MySQL dan sesuaikan pengaturan `.env` dengan kredensial database Anda
+6. Jalankan migrasi untuk membuat tabel database
+    ```bash
+    php artisan migrate
+    ```
+7. Jalankan aplikasi di lokal
+    ```bash
+    php artisan serve
+    ```
+
+## 🚀 Fitur Pengembangan Mendatang
+
+-   Penambahan fitur-fitur lainnya sesuai dengan kebutuhan pesantren
+-   Perbaikan UI/UX untuk pengalaman pengguna yang lebih baik
+
+## 📜 Lisensi
+
+Frontend menggunakan template Kindedo dari ThemeForest yang telah dimodifikasi.  
+Lisensi asli dapat ditemukan di: https://themeforest.net/licenses  
+Template ini tidak disertakan dalam repository ini karena hak cipta.
