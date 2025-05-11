@@ -7,23 +7,23 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Jalankan migrasi.
      */
     public function up(): void
     {
         Schema::create('tentang_pesantren', function (Blueprint $table) {
             $table->id();
-            $table->string('judul');
-            $table->text('deskripsi');
-            $table->string('foto')->nullable();
-            $table->string('keterangan_video')->nullable();
-            $table->string('link_video')->nullable();
+            $table->string('judul', 200)->index(); // Tambah index untuk optimasi pencarian
+            $table->text('deskripsi'); // Pastikan sesuai kebutuhan (bisa juga longText)
+            $table->string('foto', 255)->nullable();
+            $table->string('keterangan_video', 255)->nullable();
+            $table->string('link_video', 500)->nullable(); // Jika video dari YouTube, 500 cukup
             $table->timestamps();
         });
     }
 
     /**
-     * Reverse the migrations.
+     * Rollback migrasi.
      */
     public function down(): void
     {

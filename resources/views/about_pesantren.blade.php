@@ -5,7 +5,7 @@
                 <div class="bd-promotion-thumb">
                     <div class="bd-promotion-thumb-mask p-relative wow fadeInLeft" data-wow-delay=".3s"
                         data-wow-duration="1">
-                        <img src="{{ url('assets/img/promotion/' . ($tentang_pesantren->foto ?? '#')) }}"
+                        <img src="{{ asset('assets/img/promotion/' . ($tentang_pesantren->foto ?? 'default.png')) }}"
                             alt="Image not found">
                         <div class="panel wow"></div>
                     </div>

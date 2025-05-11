@@ -7,30 +7,26 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
-     *
-     * @return void
+     * Jalankan migration.
      */
     public function up()
     {
         Schema::create('hero', function (Blueprint $table) {
             $table->id();
-            $table->string('judul')->default('Selamat Datang Di');
+            $table->string('judul', 100)->default('Selamat Datang Di');
             $table->text('isi')->default('Pesantren Abdurrahman Bin Auf');
-            $table->string('image')->default('assets/img/hero/default.jpg');
-            $table->string('link_fb')->default('#');
-            $table->string('link_ig')->default('#');
-            $table->string('link_yt')->default('#');
-            $table->string('keterangan_tombol')->default('Selengkapnya');
-            $table->string('link_btn')->default('#');
-            $table->timestamps(); // created_at dan updated_at
+            $table->string('image', 255)->default('assets/img/hero/default-hero.jpg');
+            $table->text('link_fb')->nullable();
+            $table->text('link_ig')->nullable();
+            $table->text('link_yt')->nullable();
+            $table->string('keterangan_tombol', 50)->default('Selengkapnya');
+            $table->text('link_btn')->nullable();
+            $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
     public function down()
     {
